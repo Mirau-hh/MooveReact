@@ -1,0 +1,12 @@
+.limitH{
+    padding-top: 10px;
+    height: 70px;
+    overflow-y: scroll;
+}
+
+.limitImg{
+    max-height:400px;
+    max-width:500px;
+    height:auto;
+    width:auto;
+}
