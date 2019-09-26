@@ -10,3 +10,7 @@
     height:auto;
     width:auto;
 }
+
+.center{
+    justify-items: center;
+}

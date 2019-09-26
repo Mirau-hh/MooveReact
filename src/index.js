@@ -3,23 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-//import App from './routes';
-
 //Import de router
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
+//Components
 import Films from './components/film'
 import Home from './components/home'
 
+//Redux
+import { Provider } from 'react-redux';
+import store from './redux/store';
+
 //Import de components
 
-const App = () => (  
-    <BrowserRouter>
-        <Switch>
-            <Route exact path = "/" component = {Home}/>
-            <Route path = "/film/:id" component = {Films}/>
-        </Switch>
-    </BrowserRouter>
+const App = () => (
+    <Provider store={store}>
+        <BrowserRouter>
+            <Switch>
+                <Route exact path = "/" component = {Home}/>
+                <Route path = "/film/:id" component = {Films}/>
+            </Switch>
+        </BrowserRouter>
+    </Provider>
 );
 
 ReactDOM.render(<App /> , document.getElementById('root'));
