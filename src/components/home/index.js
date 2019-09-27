@@ -12,7 +12,7 @@ import { compose } from 'redux';
 import saveFilms from '../../redux/actions/saveFilms';
 import savePage from '../../redux/actions/savePage';
 
-class Home extends Component {
+export class Home extends Component {
   constructor() {
     super();
     this.state = {
@@ -54,7 +54,7 @@ class Home extends Component {
     });
 
     return(
-      <div className="container">
+      <div className="container" data-test="div-test">
         <div className = "center">
 
           <div className="row mt-4">

@@ -8,7 +8,7 @@ import {withRouter} from 'react-router-dom';
 import ReactPlayer from 'react-player'
 
 
-class Films extends Component {
+export class Films extends Component {
   constructor() {
     super();
     this.state = {
@@ -22,11 +22,11 @@ class Films extends Component {
 
   render(){
     const { history } = this.props;
-
+    
     switch(this.state.fetch_status){
       case 'ERROR': {
         return(
-          <div className="container">
+          <div className="container" data-test="div-test">
             <div className="row mt-4">
               <div className="col-md-16">
                 <h1>Something went wrong :(</h1>
@@ -37,7 +37,7 @@ class Films extends Component {
       }
       case 'OK': {
         return(
-          <div className="container">
+          <div className="container" data-test="div-test">
             <div className="row mt-4">
               <div className="col-md-16">
                   <div >
@@ -55,7 +55,7 @@ class Films extends Component {
       }
       default:
         return(
-          <div className="container">
+          <div className="container" data-test="div-test">
             <div className="row mt-4">
               <div className="col-md-16">
                 <h1>Loading...</h1>
