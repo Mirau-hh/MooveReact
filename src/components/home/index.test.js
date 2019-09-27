@@ -23,9 +23,8 @@ describe('Home commponent', () => {
         });
 
         it('Should render without errors', () =>{
-            const component = wrapper.find('[data-test="div-test"]');
-            console.log(component.debug());
-            expect(component).toBeDefined();
+            const component = wrapper.hasClass('container');
+            expect(component).toBeTruthy();
         });
     });
 

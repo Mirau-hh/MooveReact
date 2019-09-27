@@ -20,8 +20,8 @@ describe('Film commponent', () => {
         });
 
         it('Should render without errors', () =>{
-            const component = wrapper.find('[data-test="div-test"]');
-            expect(component).toBeDefined();
+            const component = wrapper.hasClass('container');
+            expect(component).toBeTruthy();
         });
     });
 
