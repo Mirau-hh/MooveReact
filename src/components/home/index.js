@@ -10,7 +10,7 @@ import { compose } from 'redux';
 
 //Redux Actions
 import saveFilms from '../../redux/actions/saveFilms';
-import savePage from '../../redux/actions/savePage'
+import savePage from '../../redux/actions/savePage';
 
 class Home extends Component {
   constructor() {
@@ -98,7 +98,7 @@ class Home extends Component {
     .then(res => res.json())
     .then((data) => {
       if(data.hasOwnProperty('results')){
-        this.props.saveFilms(data.results);
+        this.props.saveFilms(data.results);//LLamadas a las actions de redux
         this.props.savePage(data.page);
       }
       this.setState({
@@ -112,6 +112,8 @@ class Home extends Component {
   }
 }
 
+
+//Redux
 const mapStateToProps = (state) => {
   return {
     films: state.films,
