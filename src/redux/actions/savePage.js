@@ -1,6 +1,5 @@
 export const type = 'savePage';
 
-
 const savePage = page => {
     return {
         type,

@@ -1,5 +1,5 @@
-import {type as saveFilmsType} from '../actions/saveFilms';
-import filmsReducer from './films';
+import {type as saveFilmsType} from '../../actions/saveFilms';
+import filmsReducer from '../films';
 
 describe('Films Redcer', () =>{
     it('Should return default state', () =>{

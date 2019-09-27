@@ -1,7 +1,8 @@
-import { type as savePageType} from '../actions/savePage';
-import pageReducer from './page';
+import { type as savePageType} from '../../actions/savePage';
+import pageReducer from '../page';
 
 describe('Page Redcer', () =>{
+    
     it('Should return default state', () =>{
         const newState = pageReducer(undefined, {});
         expect(newState).toEqual(0); //Se espera un valor inicioal de 0

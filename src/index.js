@@ -16,7 +16,7 @@ import store from './redux/store';
 
 //Import de components
 
-const App = () => (
+export const App = () => (
     <Provider store={store}>
         <BrowserRouter>
             <Switch>
